@@ -23,3 +23,16 @@ function App() {
 }
 
 export default App;
+
+const Event = require('./models/Event'); // Adjust the path based on where you're importing it
+
+// Example: Creating a new event
+const newEvent = new Event({
+  name: 'TEST Community Meetup',
+  location: 'TEST Central Park',
+  date: new Date('2024-05-01')
+});
+
+newEvent.save()
+  .then((event) => console.log(event))
+  .catch((error) => console.error('Error saving event:', error));
