@@ -7,7 +7,7 @@ const eventSchema = new mongoose.Schema({
   },
   location: String,
   date: Date,
-  // Add more fields as necessary
+  // Consider adding a reference to the User model if needed
 });
 
 const Event = mongoose.model('Event', eventSchema);
